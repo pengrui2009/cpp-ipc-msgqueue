@@ -1,0 +1,4 @@
+[submodule "libipc"]
+	path = libipc
+	url = git@github.com:mutouyun/cpp-ipc.git
+	branch = master
