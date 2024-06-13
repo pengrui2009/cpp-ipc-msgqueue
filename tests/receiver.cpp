@@ -4,8 +4,6 @@ std::shared_ptr<Ipc::IpcMsgQueue> msgqueue_ptr{std::make_shared<Ipc::IpcMsgQueue
 std::atomic<bool> is_quit{false};
 int main()
 {
-    
-
     auto exit = [](int) {
         is_quit.store(true, std::memory_order_release);
         msgqueue_ptr->DeInititalize();

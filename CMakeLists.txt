@@ -1,10 +1,15 @@
+cmake_minimum_required(VERSION 3.10)
 project(msg_queue)
+
+add_subdirectory(libipc)
 
 include_directories(
     include
 )
 
 file(GLOB HEAD_FILES ./*.h)
+
+
 
 add_executable(receiver tests/receiver.cpp ${HEAD_FILES})
 

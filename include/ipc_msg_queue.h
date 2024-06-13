@@ -36,13 +36,13 @@ public:
 
     explicit IpcMsgQueue(std::string name) : queue_name_(name)
     {
-        char *queue_name = queue_name_.data();
+        const char *queue_name = queue_name_.data();
         queue_ptr_ = std::make_shared<msg_que_t>(queue_name);
     }
 
     IpcMsgQueue(char* name) : queue_name_(name)
     {
-        char *queue_name = queue_name_.data();
+        const char *queue_name = queue_name_.data();
         queue_ptr_  = std::make_shared<msg_que_t>(queue_name);
     }
 
