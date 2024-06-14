@@ -67,7 +67,7 @@ public:
             return -1;
         }
 
-        if (QueueMode::kSenderMode) {
+        if (QueueMode::kSenderMode == mode) {
             if (!queue_ptr_->reconnect(ipc::sender)) {
                 std::cerr << __func__ << ": connect failed.\n";
                 result = -1;
